@@ -14,7 +14,7 @@ class Brewmaster < Formula
     # Rewrite LIB_DIR to point to the installed location
     inreplace bin/"brewmaster",
       'LIB_DIR="${BREWMASTER_LIB:-$SCRIPT_DIR/../lib/brewmaster}"',
-      "LIB_DIR=\"${BREWMASTER_LIB:-#{libexec}}\""
+      "LIB_DIR=\"${BREWMASTER_LIB:-#{libexec}/brewmaster}\""
   end
 
   test do
