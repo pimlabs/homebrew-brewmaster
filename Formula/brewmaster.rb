@@ -1,9 +1,9 @@
 class Brewmaster < Formula
   desc "Selective Homebrew package upgrades by semver bump level"
   homepage "https://github.com/pimlabs/brewmaster"
-  url "https://github.com/pimlabs/brewmaster/archive/refs/tags/v0.3.0.tar.gz"
-  sha256 "7e1a1887373bb397025fa8eb2d95016c6b0a3efb9733056088bc5a2eed677282"
-  version "0.3.0"
+  url "https://github.com/pimlabs/brewmaster/archive/refs/tags/v0.5.0.tar.gz"
+  sha256 "8049a1ffead485ee5ceaf43bdcf5dec3aa421069bf1d49809ab278d63e718924"
+  version "0.5.0"
   license "MIT"
 
   depends_on "jq"
@@ -18,6 +18,6 @@ class Brewmaster < Formula
   end
 
   test do
-    assert_match "brewmaster 0.3.0", shell_output("#{bin}/brewmaster --version")
+    assert_match "brewmaster 0.5.0", shell_output("#{bin}/brewmaster --version")
   end
 end
