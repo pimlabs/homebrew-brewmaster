@@ -15,6 +15,11 @@ class Brewmaster < Formula
     inreplace bin/"brewmaster",
       'LIB_DIR="${BREWMASTER_LIB:-$SCRIPT_DIR/../lib/brewmaster}"',
       "LIB_DIR=\"${BREWMASTER_LIB:-#{libexec}/brewmaster}\""
+
+    bash_completion.install "completions/brewmaster.bash" => "brewmaster"
+    zsh_completion.install "completions/brewmaster.zsh" => "_brewmaster"
+    fish_completion.install "completions/brewmaster.fish"
+    man1.install "docs/brewmaster.1"
   end
 
   test do
